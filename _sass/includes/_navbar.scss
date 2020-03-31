@@ -1,0 +1,23 @@
+.bd-navbar {
+  min-height: 4rem;
+  background-color: #7952b3;
+}
+
+.bd-navbar .navbar-nav-svg {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-top;
+}
+
+.btn-bd-download {
+  font-weight: 600;
+  color: #ffe484;
+  border-color: #ffe484;
+}
+
+.btn-bd-download:hover, .btn-bd-download:active {
+  color: #2a2730;
+  background-color: #ffe484;
+  border-color: #ffe484;
+}
