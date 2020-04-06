@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+{% seo %}
+<link rel="alternate" type="application/rss+xml" title="Feed for publications &raquo;" href="{{ '/feed.xml' | relative_url }}" />
+<link rel="alternate" href="{{ '/' | absolute_url }}" hreflang="en" />
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- My style -->
+<link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ 'assets/img/icons/favicon-32.png' | relative_url }}" sizes="32x32">
+<link rel="icon" href="{{ 'assets/img/icons/favicon-128.png' | relative_url }}" sizes="128x128">
+<link rel="apple-touch-icon-precomposed" href="{{ '/assets/img/icons/favicon-180.png' | relative_url }}" />
+<meta name="msapplication-TileImage" content="{{ '/assets/img/icons/favicon-270.png' | relative_url }}" />
+
+{% if page.comments %}
+  <script id="dsq-count-scr" src="//reinanhs.disqus.com/count.js" async></script>
+{% endif %}
