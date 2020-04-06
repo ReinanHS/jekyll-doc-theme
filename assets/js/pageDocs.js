@@ -3,6 +3,7 @@
 var url = '{{ '/docs/' | relative_url }}'
 if(url != window.location.pathname){
   var version = window.location.pathname.replace(url, '').split('/')[0];
+  document.querySelector('#bd-versions').innerText = 'v'+version
   var requestOptions = {
     method: 'GET',
     redirect: 'follow'
@@ -26,4 +27,8 @@ if(url != window.location.pathname){
       });
     })
     .catch(error => console.log('error', error));
+  
+  document.querySelectorAll('div[aria-labelledby="bd-versions"] a').forEach((item) => {
+      item.href = '{{ 'docs/' | relative_url }}' + item.href.split('/').pop()
+  })
 }
