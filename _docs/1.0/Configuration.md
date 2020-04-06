@@ -2,7 +2,6 @@
 layout: docs
 title:  "Configuration"
 date:   2020-03-24 14:55:43 -0300
-version: '1.0'
 ---
 {% doc_versions %}
 

@@ -65,5 +65,5 @@ $(document).ready(function () {
       scrollTop: $(divId).offset().top - 70
     }, 100);
   });
-
+  
 });

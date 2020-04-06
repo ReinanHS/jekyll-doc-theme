@@ -7,3 +7,8 @@
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- My Script -->
 <script src="{{ 'assets/js/app.js' | relative_url }}"></script>
+<script>
+document.querySelectorAll('div[aria-labelledby="bd-versions"] a').forEach((item) => {
+    item.href = '{{ "docs/" | relative_url }}' + item.href.split('/').pop()
+})
+</script>

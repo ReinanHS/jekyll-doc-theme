@@ -27,8 +27,4 @@ if(url != window.location.pathname){
       });
     })
     .catch(error => console.log('error', error));
-  
-  document.querySelectorAll('div[aria-labelledby="bd-versions"] a').forEach((item) => {
-      item.href = '{{ 'docs/' | relative_url }}' + item.href.split('/').pop()
-  })
 }
