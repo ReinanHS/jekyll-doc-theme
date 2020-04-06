@@ -16,11 +16,12 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-version-docs"
   gem 'jekyll-seo-tag'
   gem "jekyll-last-modified-at"
   gem "jekyll-sitemap"
   gem "jekyll-redirect-from"
+  # Used for the development mod :path => 'D:\Projects\web\jekyll\jekyll-version-docs'
+  gem "jekyll-version-docs", "0.1.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
