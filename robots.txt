@@ -1,0 +1,1 @@
+Sitemap: https://reinanhs.github.io/jekyll-doc-theme/sitemap.xml
