@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar px-0 border-bottom shadow-sm">
+<nav class="navbar navbar-expand-md navbar-dark flex-column flex-md-row bd-navbar px-0 border-bottom shadow-sm">
   <div class="container flex-wrap flex-md-nowrap py-0 px-3">
     <a class="navbar-brand" href="{{ '/' | relative_url }}">
       {% if site.theme_settings.logo %}
-        <img alt="logo img" width="36" height="36" class="d-block" src="{{ site.theme_settings.logo | relative_url }}" />
+        <img alt="logo img" width="36" height="36" class="d-inline-block align-top" src="{{ site.theme_settings.logo | relative_url }}" />
       {% else %}
       {{ site.title }}
       {% endif %}
@@ -34,7 +34,7 @@
       </ul>
 
       <div class="my-2 my-lg-0 d-flex">
-        <ul class="navbar-nav ml-sm-auto">
+        <ul class="navbar-nav ml-md-auto flex-row">
           <li class="nav-item dropdown">
             <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v{% doc_version %}

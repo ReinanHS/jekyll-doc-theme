@@ -31,10 +31,12 @@
   border-right: 1px solid rgba(0,0,0,.1);
 }
 
-.bd-links {
-  display: block !important;
-  max-height: calc(100vh - 9rem);
-  overflow-y: auto;
+@media screen and (min-width: 768px) {
+  .bd-links {
+    display: block !important;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+  }
 }
 
 .bd-links {
@@ -136,4 +138,31 @@
 .bd-content {
   -ms-flex-order: 1;
   order: 1;
+}
+
+.bd-sidebar {
+    -ms-flex-order: 0;
+    order: 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 768px) {
+  .bd-sidebar {
+    -ms-flex-order: 0;
+    order: 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: relative;
+    top: auto;
+    height: auto;
+    flex: initial;
+    margin-bottom: 2em;
+  }
+
+  .algolia-autocomplete {
+    flex: 1;
+  }
+
+  .btn.btn-link.bd-search-docs-toggle {
+    margin-bottom: 15px;
+  }
 }
