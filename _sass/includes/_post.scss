@@ -1,0 +1,60 @@
+.post-header h1 a{
+  color: #282c34;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 65px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.post-header p.post-meta {
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.post-header .post-author {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+
+.post-header .post-author {
+  display: -webkit-box;
+  display: flex;
+}
+
+.post-header .post-authorName a{
+  color: #6d6d6d;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.post-header .post-authorName {
+  color: rgba(57,57,57,.7);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.post-header .post-author-photo a img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

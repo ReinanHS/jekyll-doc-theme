@@ -1,0 +1,27 @@
+{% assign author = site.data.authors[include.author] %}
+
+{% assign authorPhoto = 'assets/img/default-avatar.png' | relative_url %}
+{% assign authorUrl = author.name | prepend: 'https://duckduckgo.com/?t=ffab&q=' %}
+{% if author.social.github  %}
+  {% assign authorUrl = author.social.github | prepend:'https://github.com/' %}
+  {% assign authorPhoto = 'https://avatars3.githubusercontent.com/' | append: author.social.github | append:'?v=3&s=100' %}
+{% elsif author.social.twitter  %}
+  {% assign authorUrl = author.social.twitter | prepend:'https://twitter.com/' %}
+{% elsif author.social.instagram  %}
+  {% assign authorUrl = author.social.instagram | prepend:'https://instagram.com/' %}
+{% elsif author.social.facebook  %}
+  {% assign authorUrl = author.social.facebook | prepend:'https://facebook.com/' %}
+{% endif%}
+
+<div class="post-author">
+  <p class="post-authorName">
+    <a href="{{ authorUrl }}" target="_blank">
+      {{ author.name | default: 'Unknown author' }}
+    </a>
+  </p>
+  <div class="post-author-photo authorPhotoBig">
+    <a href="{{ authorUrl }}" target="_blank">
+      <img src="{{ authorPhoto }}" alt="{{ author.name | default: 'Unknown author' }}">
+    </a>
+  </div>
+</div>

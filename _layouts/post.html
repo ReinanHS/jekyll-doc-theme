@@ -16,23 +16,40 @@
         </form>
         <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation">
           <div class="bd-toc-item active">
-            <ul class="nav bd-sidenav"></ul>
+            <p class="bd-toc-link">
+              All Blog Posts
+            </p>
+            <ul class="nav bd-sidenav">
+              {% for post in site.posts%}
+              <li {% if post.url == page.url %}class="active bd-sidenav-active" {% endif %}>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
           </div>
         </nav>
       </div>
-
+  
+      {% if page.url != '/news/' %}
       <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
         <ul class="section-nav"></ul>
       </nav>
-
+      {% endif %}
+  
       <main class="col-md-9 col-xl-8 py-md-5 pl-md-5 bd-content" role="main">
+        <header class="post-header mb-4">
+          <h1 class="post-title text-center">
+            <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+          </h1>
+          <p class="post-meta">{{ page.date }}</p>
+          {% include _post/author.html author=page.author %}
+        </header>
         {{ content }}
       </main>
     </div>
   </div>
 
   {% include _base/scripts.html %}
-  <script src="{{ 'assets/js/pageDocs.js' | relative_url }}"></script>
 </body>
 
 </html>
