@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "News and announcements"
-permalink: /news/
+title:  "Blog"
+permalink: /blog/
+visible: true
 ---
 
 {% for post in site.posts limit:1 %}

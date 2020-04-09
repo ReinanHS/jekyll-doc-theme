@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Jekyll Doc Theme
+title: 'Home'
 permalink: /index.html
+visible: true
 ---
 
 {% include _home/main.html %}
