@@ -21,7 +21,7 @@
           <li class="nav-item">
             {% assign versionUrl = page.url | split: '/' | last %}
             {% assign versionUrl = '/'| prepend: versionUrl | prepend: item.url %}
-            <a class="nav-link {% if page.url == item.url or page.url == versionUrl %}{{ 'active' }}{% endif %}" href="{{ item.url | relative_url }}{% if item.url == '/docs/' %}{% doc_version %}{% endif %}">
+            <a class="nav-link {% if page.url == item.url or page.url == versionUrl %}{{ 'active' }}{% endif %}" href="{{ item.url | replace: "index.html", "" | relative_url }}{% if item.url == '/docs/' %}{% doc_version %}{% endif %}">
               {{ item.title }}
               {% if page.url == item.url or page.url == versionUrl %}
               <span class="sr-only">(current)</span>
