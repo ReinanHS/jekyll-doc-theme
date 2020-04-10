@@ -6,9 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Jekyll Doc Theme | Jekyll Template for Project Websites providing documentation and blog post pages.</title>
+<title>Home | Jekyll Doc Theme</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Jekyll Doc Theme" />
+<meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jekyll Template for Project Websites providing documentation and blog post pages." />
 <meta property="og:description" content="Jekyll Template for Project Websites providing documentation and blog post pages." />
@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://reinanhs.github.io/jekyll-doc-theme/" />
 <meta property="og:site_name" content="Jekyll Doc Theme" />
 <script type="application/ld+json">
-{"name":"Jekyll Doc Theme","description":"Jekyll Template for Project Websites providing documentation and blog post pages.","@type":"WebSite","url":"https://reinanhs.github.io/jekyll-doc-theme/","headline":"Jekyll Doc Theme","dateModified":"2020-04-06T21:21:44+00:00","@context":"http://schema.org"}</script>
+{"name":"Jekyll Doc Theme","description":"Jekyll Template for Project Websites providing documentation and blog post pages.","@type":"WebSite","url":"https://reinanhs.github.io/jekyll-doc-theme/","headline":"Home","dateModified":"2020-04-09T21:54:13+00:00","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link rel="alternate" type="application/rss+xml" title="Feed for publications &raquo;" href="/jekyll-doc-theme/feed.xml" />
@@ -35,11 +35,19 @@
 <meta name="msapplication-TileImage" content="/jekyll-doc-theme/assets/img/icons/favicon-270.png" />
 
 
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-  <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar px-0 border-bottom shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-dark flex-column flex-md-row bd-navbar px-0 border-bottom shadow-sm">
   <div class="container flex-wrap flex-md-nowrap py-0 px-3">
-    <a class="navbar-brand" href="/jekyll-doc-theme/">Jekyll Doc Theme</a>
+    <a class="navbar-brand" href="/jekyll-doc-theme/">
+      
+      Jekyll Doc Theme
+      
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,22 +55,75 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/jekyll-doc-theme/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/jekyll-doc-theme/docs/1.2/">Documentation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/jekyll-doc-theme/news/">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/jekyll-doc-theme/donations/">Donations</a>
-        </li>
+        
+        
+          
+          
+          <li class="nav-item">
+            
+            
+            <a class="nav-link active" href="/jekyll-doc-theme/">
+              Home
+              
+              <span class="sr-only">(current)</span>
+              
+            </a>
+          </li>
+          
+          
+        
+          
+          
+          <li class="nav-item">
+            
+            
+            <a class="nav-link " href="/jekyll-doc-theme/docs/1.2">
+              Docs
+              
+            </a>
+          </li>
+          
+          
+        
+          
+          
+          <li class="nav-item">
+            
+            
+            <a class="nav-link " href="/jekyll-doc-theme/blog/">
+              Blog
+              
+            </a>
+          </li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       </ul>
 
       <div class="my-2 my-lg-0 d-flex">
-        <ul class="navbar-nav ml-sm-auto">
+        <ul class="navbar-nav ml-md-auto flex-row">
           <li class="nav-item dropdown">
             <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               v1.2
@@ -102,7 +163,6 @@
   </div>
 </nav>
 
-  
   <div class="hero py-5">
   <div class="container">
     <main class="bd-masthead" id="content" role="main">
@@ -160,7 +220,11 @@
 <script src="/jekyll-doc-theme/assets/js/app.js"></script>
 <script>
 document.querySelectorAll('div[aria-labelledby="bd-versions"] a').forEach((item) => {
-    item.href = '/jekyll-doc-theme/docs/' + item.href.split('/').pop()
+  let version = item.href.split('/').pop()
+  if(version != "" && document.location.pathname.split('/').includes(version)) {
+    item.classList.add('active')
+  }  
+  item.href = '/jekyll-doc-theme/docs/' + version
 })
 </script>
 </body>
