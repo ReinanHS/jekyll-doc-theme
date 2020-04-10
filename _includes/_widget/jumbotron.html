@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">{{ include.title }}</h1>
+    <p>{{ include.description }}</p>
+    {{ include.content | markdownify }}
+    {% if include.btnText %}
+    <p>
+      <a class="btn btn-primary btn-lg" href="{{ include.btnHref | default: '#' }}" role="button">
+        {{ include.btnText }}
+      </a>
+    </p>
+    {% endif %}
+  </div>
+</div>

@@ -9,6 +9,10 @@
 <script src="{{ 'assets/js/app.js' | relative_url }}"></script>
 <script>
 document.querySelectorAll('div[aria-labelledby="bd-versions"] a').forEach((item) => {
-    item.href = '{{ "docs/" | relative_url }}' + item.href.split('/').pop()
+  let version = item.href.split('/').pop()
+  if(version != "" && document.location.pathname.split('/').includes(version)) {
+    item.classList.add('active')
+  }  
+  item.href = '{{ "docs/" | relative_url }}' + version
 })
 </script>
